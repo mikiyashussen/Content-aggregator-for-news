@@ -8,7 +8,16 @@ const Tvn24 = ({ newsList }) => {
     return(
         <div className="">
             <h2>Tvn24</h2>
-           <div>
+            <div>
+                  {newsList.map(item => {
+                      return <div>
+                                <a className="title" href={item.titlelink}>{item.title}</a>
+                                <a className="title" href={item.titlelink}>{item.title}</a>
+                          </div>
+                  })}
+               {/* <a className="title" href={newsList.titlelink[0]}>{newsList.title[0]}</a> */}
+            </div> 
+           {/* <div>
                <a className="title" href={newsList.titlelink[0]}>{newsList.title[0]}</a>
             </div>
             <div>
@@ -39,7 +48,7 @@ const Tvn24 = ({ newsList }) => {
             <div>
                 <a className="detail" href={newsList.detaillink[4]}>{newsList.detail[4]}</a><br/>
                 <h3><FcClock className="mr2" /> {newsList.time[4].slice(-4)}</h3>
-            </div>
+            </div> */}
         </div>
     )
 }

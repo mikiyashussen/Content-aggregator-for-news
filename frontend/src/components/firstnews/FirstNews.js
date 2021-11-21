@@ -2,12 +2,24 @@ import React from "react";
 import './FirstNews.css';
 
 const FirstNews = ({ newsList }) => {
-    // console.log(newsList);
+    console.log(newsList);
     return(
         <div className="">
             <h2>FirstNews</h2>
-           <div>
-               <a className="title" href={newsList.titlelink[0]}>{newsList.title[0]}</a>
+
+              <div>
+                  {newsList.map(item => {
+                      return <div className='contenteHolder'>
+                                <a className="title" href={item.titlelink}>{item.title}</a>
+                                <a className="title" href={item.titlelink}>{item.title}</a>
+                          </div>
+                  })}
+               {/* <a className="title" href={newsList.titlelink[0]}>{newsList.title[0]}</a> */}
+            </div> 
+
+
+           {/* <div> */}
+               {/* <a className="title" href={newsList.titlelink[0]}>{newsList.title[0]}</a>
             </div>
             <div>
                 <a className="detail" href={newsList.detaillink[0]}>{newsList.detail[0]}</a><br/>
@@ -37,7 +49,7 @@ const FirstNews = ({ newsList }) => {
             <div>
                 <a className="detail" href={newsList.detaillink[4]}>{newsList.detail[4]}</a><br/>
                 <h3>{newsList.type[4]}</h3>
-            </div>
+            </div> */}
         </div>
     )
 }

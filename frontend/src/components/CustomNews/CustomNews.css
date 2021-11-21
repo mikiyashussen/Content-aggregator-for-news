@@ -1,0 +1,16 @@
+.contenteHolder{
+    margin: 1em;
+}
+
+ img {
+    height: 100px;
+}
+
+.title{
+    color: rgb(37, 150, 190);
+    font-size: 14px;
+}
+
+.title:hover {
+    color: rgb(20, 200, 190);
+}

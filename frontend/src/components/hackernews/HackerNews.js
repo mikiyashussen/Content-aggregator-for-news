@@ -9,7 +9,16 @@ const HackerNews = ({ newsList }) => {
     return(
         <div className="hackerNews">
             <h2>HackerNews</h2>
-           <div>
+            <div>
+                  {newsList.map(item => {
+                      return <div>
+                                <a className="title" href={item.titlelink}>{item.title}</a>
+                                <a className="title" href={item.titlelink}>{item.title}</a>
+                          </div>
+                  })}
+               {/* <a className="title" href={newsList.titlelink[0]}>{newsList.title[0]}</a> */}
+            </div> 
+           {/* <div>
                <a className="title" href={newsList.titlelink[0]}>{newsList.title[0]}</a>
             </div>
             <div>
@@ -47,7 +56,7 @@ const HackerNews = ({ newsList }) => {
             <div>
                 <a className="detail" href="#">{newsList.detail[4]}</a><br/>
                 <a className="comment mr5" href={newsList.commentlink[4]}><FcComments />{newsList.comment[4]}</a><a><FcClock />{newsList.detail[0].slice(-12)}</a>
-            </div>
+            </div> */}
         </div>
     )
 }

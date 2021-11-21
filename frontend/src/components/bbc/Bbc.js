@@ -8,7 +8,16 @@ const Bbc = ({ newsList }) => {
     return(
         <div className="">
             <h2>BBC</h2>
-           <div>
+            <div>
+                  {newsList.map(item => {
+                      return <div>
+                                <a className="title" href={item.titlelink}>{item.title}</a>
+                                <a className="title" href={item.titlelink}>{item.title}</a>
+                          </div>
+                  })}
+               {/* <a className="title" href={newsList.titlelink[0]}>{newsList.title[0]}</a> */}
+            </div> 
+           {/* <div>
                <a className="title" href={newsList.titlelink[0]}>{newsList.title[0]}</a>
             </div>
             <div>
@@ -49,7 +58,7 @@ const Bbc = ({ newsList }) => {
             <div>
                 <p>{newsList.detail[4]}</p>
                 <p className="gray">{newsList.location[4]} | <FcClock /> {newsList.time[4]}</p>
-            </div>
+            </div> */}
         </div>
     )
 }
